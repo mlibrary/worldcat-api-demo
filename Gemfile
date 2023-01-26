@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 gem "faraday"
+gem "marc"
 group :development, :test do
   gem "pry"
   gem "pry-byebug"

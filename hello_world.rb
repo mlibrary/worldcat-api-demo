@@ -1,4 +1,7 @@
 require "faraday"
+require "marc"
+require "byebug"
+require "stringio"
 connection = Faraday.new(
   url: "http://worldcat.org"
 ) do |f|
@@ -8,13 +11,17 @@ connection = Faraday.new(
 end
 
 query = {
-  maximumLibraries: 50,
-  location: 48103,
+  servicelevel: "full",
   wskey: ENV.fetch("WORLDCAT_API_KEY"),
   format: "json"
 }
 
-url = "/webservices/catalog/content/libraries/6961296"
+url = "/webservices/catalog/content/60082813"
 
 resp = connection.public_send(:get, url, query)
-puts JSON.pretty_generate(JSON.parse(resp.body))
+#puts JSON.pretty_generate(JSON.parse(resp.body))
+
+reader = MARC::XMLReader.new(StringIO.new(resp.body))
+reader.each do |record|
+  puts record.fields("019").first.subfields.map{|f|f.value}
+end

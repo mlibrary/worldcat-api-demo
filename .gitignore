@@ -4,3 +4,4 @@
 .cache
 .bundle
 .env
+.byebug_history
