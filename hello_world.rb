@@ -16,12 +16,39 @@ query = {
   format: "json"
 }
 
-url = "/webservices/catalog/content/60082813"
+output_file = ARGV[1]
+input_file = ARGV[0]
 
-resp = connection.public_send(:get, url, query)
-#puts JSON.pretty_generate(JSON.parse(resp.body))
+File.open(output_file, 'w') do |out|
+  File.open(input_file, 'r').each_line do |line|
+    line.chomp!
+    #@linecount += 1
 
-reader = MARC::XMLReader.new(StringIO.new(resp.body))
-reader.each do |record|
-  puts record.fields("019").first.subfields.map{|f|f.value}
+    mmsid, oclcnum = line.split(/\t/)
+    mmsid.strip!
+    oclcnum.strip!
+
+    url = "/webservices/catalog/content/#{oclcnum}"
+
+    resp = connection.public_send(:get, url, query)
+    #puts JSON.pretty_generate(JSON.parse(resp.body))
+
+    reader = MARC::XMLReader.new(StringIO.new(resp.body))
+    reader.each do |record|
+  
+    oclc001 = record.fields("001").map{|f|f.value}  
+    if record.fields("019").empty?
+      #puts mmsid
+      #puts record.fields("001")
+      #oclc001 = record.fields("001").map{|f|f.value}
+      out.print "#{mmsid}\t#{oclc001}\n"
+    else
+      oclc019 = record.fields("019").first.subfields.map{|f|f.value}
+      #puts mmsid 
+      #puts record.fields("001")
+      #puts record.fields("019").first.subfields.map{|f|f.value}
+      out.print "#{mmsid}\t#{oclc001}\t#{oclc019}\n"
+    end
+  end
+end
 end
