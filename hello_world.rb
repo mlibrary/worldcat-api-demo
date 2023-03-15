@@ -2,6 +2,7 @@ require "faraday"
 require "marc"
 require "byebug"
 require "stringio"
+require_relative "./lib/record.rb"
 connection = Faraday.new(
   url: "http://worldcat.org"
 ) do |f|
@@ -19,6 +20,8 @@ query = {
 output_file = ARGV[1]
 input_file = ARGV[0]
 
+
+return if output_file.nil? || input_file.nil?
 File.open(output_file, 'w') do |out|
   File.open(input_file, 'r').each_line do |line|
     line.chomp!
@@ -33,22 +36,12 @@ File.open(output_file, 'w') do |out|
     resp = connection.public_send(:get, url, query)
     #puts JSON.pretty_generate(JSON.parse(resp.body))
 
+    puts resp.body
     reader = MARC::XMLReader.new(StringIO.new(resp.body))
     reader.each do |record|
-  
-    oclc001 = record.fields("001").map{|f|f.value}  
-    if record.fields("019").empty?
-      #puts mmsid
-      #puts record.fields("001")
-      #oclc001 = record.fields("001").map{|f|f.value}
-      out.print "#{mmsid}\t#{oclc001}\n"
-    else
-      oclc019 = record.fields("019").first.subfields.map{|f|f.value}
-      #puts mmsid 
-      #puts record.fields("001")
-      #puts record.fields("019").first.subfields.map{|f|f.value}
-      out.print "#{mmsid}\t#{oclc001}\t#{oclc019}\n"
+      my_record = Record.new(record)
+      #you probably don't need the to_s
+      out.print "#{mmsid}\t#{my_record.to_s}\n"
     end
   end
-end
 end
