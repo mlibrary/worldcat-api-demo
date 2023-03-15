@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<record xmlns="http://www.loc.gov/MARC21/slim">
+    <leader>00000cam a2200000M  4500</leader>
+    <controlfield tag="001">1371295450</controlfield>
+    <controlfield tag="008">140609s1855    nyub          001 0 eng d</controlfield>
+    <datafield ind1=" " ind2=" " tag="040">
+      <subfield code="a">E8W</subfield>
+      <subfield code="b">eng</subfield>
+      <subfield code="c">E8W</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="043">
+      <subfield code="a">n-usc--</subfield>
+      <subfield code="a">n-usm--</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="100">
+      <subfield code="a">Colton, J. H.</subfield>
+      <subfield code="q">(Joseph Hutchins),</subfield>
+      <subfield code="d">1800-1893.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="4" tag="245">
+      <subfield code="a">The western tourist and emigrant's guide through the states of Ohio, Michigan, Indiana, Illinois, Missouri, Iowa, and Wisconsin, and the territories of Minesota, Missouri, and Nebraska :</subfield>
+      <subfield code="b">being an accurate and concise description of each state and territory; and containing the routes and distances on the great lines of travel. Accompanied with a large and minute map, exhibiting the township lines of the United States' surveys, the boundaries of counties, and the position of cities, villages and settlements, etc., etc.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="246">
+      <subfield code="i">Cover title:</subfield>
+      <subfield code="a">Colton's western tourist and emigrant's guide</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="260">
+      <subfield code="a">New York :</subfield>
+      <subfield code="b">J.H. Colton and Company, no. 172 William Street,</subfield>
+      <subfield code="c">1855.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">89, [1], 34, [2] pages :</subfield>
+      <subfield code="b">map ;</subfield>
+      <subfield code="c">16 cm</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="336">
+      <subfield code="a">text</subfield>
+      <subfield code="b">txt</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="337">
+      <subfield code="a">unmediated</subfield>
+      <subfield code="b">n</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="338">
+      <subfield code="a">volume</subfield>
+      <subfield code="b">nc</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">With folded, hand colored map by J. Calvin Smith.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">Includes index.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">Publisher's advertisements on pages 1-34 (3rd count).</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">"To Authors, Publishers, etc.": page [1] at end.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">Last page blank.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Public lands</subfield>
+      <subfield code="z">Middle West</subfield>
+      <subfield code="v">Maps.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Counties</subfield>
+      <subfield code="z">Middle West</subfield>
+      <subfield code="v">Maps.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Roads</subfield>
+      <subfield code="z">Middle West</subfield>
+      <subfield code="v">Maps.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="651">
+      <subfield code="a">Northwest, Old</subfield>
+      <subfield code="v">Guidebooks.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="651">
+      <subfield code="a">Mississippi River Valley</subfield>
+      <subfield code="v">Guidebooks.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="651">
+      <subfield code="a">Middle West</subfield>
+      <subfield code="v">Guidebooks.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="655">
+      <subfield code="a">Guidebooks.</subfield>
+      <subfield code="2">rbgenr</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="655">
+      <subfield code="a">Emigrant guides.</subfield>
+      <subfield code="2">rbgenr</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Smith, J. Calvin</subfield>
+      <subfield code="q">(John Calvin)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="752">
+      <subfield code="a">United States</subfield>
+      <subfield code="b">New York (State)</subfield>
+      <subfield code="d">New York.</subfield>
+    </datafield>
+  </record>
