@@ -1,6 +1,9 @@
 source "https://rubygems.org"
 
-gem "faraday"
+source "https://rubygems.pkg.github.com/mlibrary" do
+  gem "alma_rest_client", "2.0.0"
+end
+
 gem "marc"
 group :development, :test do
   gem "pry"
